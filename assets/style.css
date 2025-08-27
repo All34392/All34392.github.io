@@ -1,0 +1,183 @@
+/* ==== CONFIGURACIÓN GENERAL ==== */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+}
+
+p {
+    font-size: 1.2rem;  /* más grande texto general */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==== VISTAS ==== */
+.view {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 95vh;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    padding: 20px;
+}
+.view.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==== FONDOS ==== */
+.view::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#portada::before { background-image: url("../assets/images/portada-bg.jpg"); }
+#textoDia::before { background-image: url("../assets/images/dia-bg.jpg"); }
+#trivia::before   { background-image: url("../assets/images/trivia-bg.jpg"); }
+
+/* ==== TÍTULOS ==== */
+h1, h2 {
+    color: #222;
+    margin: 15px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+
+/* Estilo especial para "Texto del Día" */
+#tituloDia {
+    background: #ffde7b;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ==== CONTENEDORES ==== */
+.versiculo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    max-width: 90%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ==== ICONOS ==== */
+.icono {
+    width: 60px;
+    height: 60px;
+}
+
+/* ==== BOTONES ==== */
+button {
+    margin-top: 15px;
+    padding: 14px 28px;
+    border: none;
+    background-color: #ff7b7b;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+button:hover {
+    background-color: #ff5555;
+    transform: scale(1.05);
+}
+
+/* ==== TRIVIA ==== */
+#triviaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Pregunta más destacada */
+#pregunta {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Layout icono + opciones */
+#iconoTrivia {
+    width: 80px;
+    height: 80px;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+#opciones button {
+    background-color: #70b7ff;
+    font-size: 1.1rem;
+    padding: 12px;
+}
+#opciones button:hover {
+    background-color: #5aa8ff;
+}
+
+/* En pantallas grandes: icono a la izquierda y opciones a la derecha */
+@media (min-width: 768px) {
+    #triviaContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #pregunta {
+        width: 100%;
+        text-align: center;
+    }
+    #iconoTrivia {
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+    #opciones {
+        max-width: 450px;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    p { font-size: 1.3rem; }
+    .icono { width: 70px; height: 70px; }
+}
+
+/* ==== ANIMACIONES ==== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

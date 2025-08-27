@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes de la Biblia</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- PORTADA -->
+    <section id="portada" class="view active">
+       <!-- <img src="assets/images/portada-bg.jpg" class="fondo" alt="Fondo portada">-->
+        <h1>Mes de la Biblia</h1>
+        <button id="btnIniciar">Iniciar</button>
+    </section>
+x
+    <!-- TEXTO DEL DÍA -->
+    <section id="textoDia" class="view">
+       <!-- <img src="assets/images/dia-bg.jpg" class="fondo" alt="Fondo Día">-->
+        <h2 id="tituloDia">Texto del Día</h2>
+        <div class="versiculo-container">
+            <img id="iconoDia" class="icono" alt="Icono Versículo">
+            <p id="versiculo"></p>
+        </div>
+        <button id="btnTrivia">Trivia</button>
+    </section>
+
+    <!-- TRIVIA -->
+    <section id="trivia" class="view">
+       <!-- <img src="assets/images/trivia-bg.jpg" class="fondo" alt="Fondo Trivia">-->
+        <h2>Trivia</h2>
+        <div id="triviaContainer">
+            <img id="iconoTrivia" class="icono" alt="Icono Trivia">
+            <p id="pregunta"></p>
+            <div id="opciones"></div>
+        </div>
+        <button id="btnVolver">Volver</button>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

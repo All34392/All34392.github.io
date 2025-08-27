@@ -1,0 +1,32 @@
+{
+    "versiculos": [
+        {
+            "dia": 1,
+            "texto": "El Señor es mi pastor; nada me faltará.",
+            "referencia": "Salmo 23:1",
+            "icono": "biblia.png"
+        },
+        {
+            "dia": 2,
+            "texto": "Dios es amor.",
+            "referencia": "1 Juan 4:8",
+            "icono": "paloma.png"
+        }
+    ],
+    "trivias": [
+        {
+            "dia": 1,
+            "pregunta": "¿Quién construyó el arca?",
+            "opciones": ["Moisés", "Noé", "Abraham"],
+            "respuesta": 1,
+            "icono": "jesus.png"
+        },
+        {
+            "dia": 2,
+            "pregunta": "¿En qué ciudad nació Jesús?",
+            "opciones": ["Jerusalén", "Belén", "Nazaret"],
+            "respuesta": 1,
+            "icono": "cruz.png"
+        }
+    ]
+}
